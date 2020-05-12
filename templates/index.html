@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Rating Predictor</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Start Bootstrap</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav> -->
+
+  <!-- Page Content -->
+  <div class="container">
+    <form action="{{url_for('predict')}}" class="row justify-content-sm-center" method="POST">
+      <div class="col-lg-12 text-center">
+        <h1 class="mt-5">Enter any comment to predict rating</h1>
+        <p class="lead">*Comment length must be minimum 3*</p>
+        
+        <ul class="list-unstyled row justify-content-sm-center">
+          <li class="col mb-4"><input type="text" name="comment" value="{{comment}}" class="form-control form-control-lg" placeholder="Enter any comment..." style="height: 80px;"></li>          
+          <!-- <li class="col-md-3 mb-4"><input class="btn btn-block btn-lg btn-dark font-weight-bolder text-dark" name="prediction" value="{{rating}}" style="height: 70px;" disabled></li> -->
+        </ul>
+        <ul class="list-unstyled row justify-content-sm-center">
+          <!-- <li class="col mb-4"><input type="text" name="comment" value="{{comment}}" class="form-control form-control-lg" placeholder="Enter any comment..." style="resize: none; height: 70px;"></li>           -->
+          <li class="col-md-3 mb-4"><button type="submit" class="btn btn-block btn-lg btn-info font-weight-bolder text-dark" style="height: 60px">Predict</button></li>
+        </ul>
+        <ul class="list-unstyled row justify-content-sm-center">
+          <!-- <li class="col mb-4"><input type="text" name="comment" value="{{comment}}" class="form-control form-control-lg" placeholder="Enter any comment..." style="resize: none; height: 70px;"></li>           -->
+          <li class="col-md-1 mb-4"><input class="btn btn-block btn-lg btn-success font-weight-bolder text-dark" name="prediction" value="{{rating}}" style="height: 50px;"></li>
+        </ul>
+        
+      </div>
+    </form>
+  </div>
+
+
+</body>
+
+</html>
